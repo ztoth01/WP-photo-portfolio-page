@@ -16,28 +16,29 @@
 
 get_header(); ?>
 
-	<main id="con">
-
-		<div class="container is--visible" id="swipegallery">
-
+	<main class="container">
+		<div class="container__photo is--visible" id="swipegallery">
 
 			<?php if( have_rows('gallery') ):
 			$i = 1;
 			?>
-			<ul id="slides">
+			<ul id="slides" class="slides">
 			<?php while ( have_rows('gallery') ) : the_row(); ?>
 
-			<li class="slide <?php if($i == 1){echo "showing";}?>">
+			<li class="slide <?php if($i == 1){echo "showing";}?>" >
 				<img class="" src="<?php the_sub_field('image'); ?>" alt="<?php echo $i;?>" />
-				<span><?php the_sub_field('description'); ?></span>
+<!--				<span>--><?php //the_sub_field('description'); ?><!--</span>-->
+
 			 </li>
 
 			<?php
 				$i ++;
 				endwhile;
 			?>
-		</ul>
 
+			</ul>
+			<span class="controls previous" id="previous"></span>
+			<span class="controls next" id="next"></span>
 		</div>
 				<?php endif;?>
 
@@ -66,14 +67,8 @@ get_header(); ?>
 		</div>
 	<?php endif;?>
 
-
-
-
-
-		<button class="controls" id="previous">Previous</button>
-		<button class="controls" id="next">Next</button>
-		<span class="tigger" id="thumbnailsIcon"></span>
-		<span class="tigger" id="closeThumbNails"></span>
+		<span class="tigger thumbnailsIcon" id="thumbnailsIcon"></span>
+		<span class="tigger closeThumbNails" id="closeThumbNails"></span>
 	</main><!-- #main -->
 
 <?php

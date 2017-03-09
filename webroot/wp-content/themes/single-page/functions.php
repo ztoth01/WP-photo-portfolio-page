@@ -107,7 +107,7 @@ add_action( 'widgets_init', 'single_page_widgets_init' );
 function single_page_scripts()
 {
 
-    wp_enqueue_style('Google_font', 'https://fonts.googleapis.com/css?family=Abril+Fatface|Lato');
+    wp_enqueue_style('Google_font', 'https://fonts.googleapis.com/css?family=Lato:300,400');
 
     wp_enqueue_style('custom', get_template_directory_uri() . '/css/custom.css');
 

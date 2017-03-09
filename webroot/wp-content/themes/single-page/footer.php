@@ -13,7 +13,7 @@
 
 	</div><!-- #content -->
 
-	<footer id="colophon" class="site-footer" role="contentinfo">
+	<footer id="colophon site-footer" class="site-footer" role="contentinfo">
 		<p id="footer">&copy; Anna Olszewska Photography <?php echo date("Y") ?></p>
 		<div class="site-info">
 		</div><!-- .site-info -->

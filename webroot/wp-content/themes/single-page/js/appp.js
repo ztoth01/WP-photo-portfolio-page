@@ -13,7 +13,6 @@ window.addEventListener('load', function(){
         containerThumbnails = document.getElementById('container-thumbnails'),
         thumbnails = document.querySelectorAll('.thumbnail');
 
-
     App = {
         onTouch: (el, callback) => {
         let touchsurface = el,
