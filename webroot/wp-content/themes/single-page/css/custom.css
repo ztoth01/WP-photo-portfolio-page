@@ -229,7 +229,8 @@ img{
 	margin: 0 auto;
 }
 .site-footer{
-	margin-top: 8%;
+	padding-top: 20px;
+    text-align: center;
 }
 
 /*---------------------------------------*/
@@ -307,17 +308,17 @@ img{
 
 .container{
     display: flex;
-    min-height: 60vh;
+    min-height: 70vh;
     justify-content: center;
-    align-self: center;
+    align-self: stretch;
 }
 
 .container__photo{
-    height: 400px;
+    /*height: 400px;*/
     /*min-width: 500px;*/
     width: 90%;
     display: block;
-    margin: auto;
+    /*margin: auto;*/
     position: relative;
 }
 
@@ -360,6 +361,7 @@ img{
     position: relative;
     /*left: -50%;*/
     max-width: 1000px;
+    margin-bottom: 30px;
 }
 
 .showing {
@@ -398,6 +400,9 @@ img{
 
 .thumbnails{
     display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+    margin: 0 auto;
 }
 
 /*---------------------------------------*/
@@ -479,7 +484,7 @@ img{
 
 .info-box{
 	right: 5%;
-	background: #ffffff;
+	background: rgba(238,238,238, .85);
 	position:absolute;
 	padding: 0 40px 40px 30px;
 	border:none;
@@ -783,7 +788,7 @@ img{
 
     .info-box{
         right: 5%;
-        background: rgba(238,238,238, .85);
+        /*background: rgba(238,238,238, .85);*/
         /*position:relative;*/
         padding: 0;
         border:none;
@@ -791,7 +796,7 @@ img{
         z-index: 10000;
         width:90%;
         text-align: center;
-        top: 123px;
+        top: 73px;
     }
 
 }
