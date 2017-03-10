@@ -11,7 +11,9 @@ window.addEventListener('load', function(){
         closeThumbNails = document.getElementById('closeThumbNails'),
         swipegallery = document.getElementById('swipegallery'),
         containerThumbnails = document.getElementById('container-thumbnails'),
-        thumbnails = document.querySelectorAll('.thumbnail');
+        thumbnails = document.querySelectorAll('.thumbnail'),
+        mobileNav = document.getElementById("mobile-nav__inner"),
+        humIcon = document.getElementById("c-hamburger");
 
     App = {
         onTouch: (el, callback) => {
@@ -102,6 +104,10 @@ window.addEventListener('load', function(){
             elHide.classList.toggle("is--hidden");
             elShow.classList.toggle("is--visible");
         },
+        toggleHeight:(elHide)=>{
+            elHide.classList.toggle("is--height");
+            elHide.classList.toggle("is--no-height");
+        },
         toggleHandler:(toggle)=> {
           toggle.addEventListener( "click", function(e) {
             e.preventDefault();
@@ -139,11 +145,15 @@ window.addEventListener('load', function(){
         App.nextSlide( );
     };
 
+    humIcon.onclick = () =>{
+        App.toggleHeight(mobileNav);
+    };
+
     previous.onclick = ()=>{
         App.previousSlide();
     };
 
-    App.toggleHandler(document.getElementById("c-hamburger"));
+    App.toggleHandler(humIcon);
 
     App.onTouch(el, function(evt, dir, phase, swipetype, distance){
         if (phase == 'end'){ // on touchend

@@ -16,7 +16,7 @@ jQuery(window).load(function() {
 	//
 	// });
 	
-	jQuery('#info').on('click', function(){
+	jQuery('#info, #info-mobile').on('click', function(){
 		jQuery('#info-box').stop().fadeToggle(300);
 		console.log('rrr');
 		
