@@ -23,6 +23,17 @@
 <body <?php body_class(); ?>>
 <div id="outer">
 	<header id="site-header" class="site-header">
+
+
+
+		<div class="o-grid__item">
+			<button id="c-hamburger" class="c-hamburger c-hamburger--htx">
+				<span>toggle menu</span>
+			</button>
+		</div>
+
+
+
 		<div id="menuW" class="menuW">
 			<nav id="mainNav" class="mainNav">
 				<span><a id="site-name" href="<?php echo site_url(); ?>" class="navLink site-name">Anna Olszewska</a></span>

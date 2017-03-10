@@ -101,6 +101,12 @@ window.addEventListener('load', function(){
         hideShowToggle:(elHide, elShow)=>{
             elHide.classList.toggle("is--hidden");
             elShow.classList.toggle("is--visible");
+        },
+        toggleHandler:(toggle)=> {
+          toggle.addEventListener( "click", function(e) {
+            e.preventDefault();
+            (this.classList.contains("is-active") === true) ? this.classList.remove("is-active") : this.classList.add("is-active");
+          });
         }
 
     }; // End of App
@@ -132,9 +138,12 @@ window.addEventListener('load', function(){
     next.onclick = ()=>{
         App.nextSlide( );
     };
+
     previous.onclick = ()=>{
         App.previousSlide();
     };
+
+    App.toggleHandler(document.getElementById("c-hamburger"));
 
     App.onTouch(el, function(evt, dir, phase, swipetype, distance){
         if (phase == 'end'){ // on touchend
