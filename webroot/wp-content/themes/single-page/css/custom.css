@@ -38,6 +38,9 @@ body{
     margin: 0 auto;
     background: #FEFEFE;
     overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 /********************  Header  *******************/
@@ -229,8 +232,9 @@ img{
 	margin: 0 auto;
 }
 .site-footer{
-	padding-top: 20px;
+	padding: 20px 0 50px ;
     text-align: center;
+    margin-top: 20px;
 }
 
 /*---------------------------------------*/
@@ -311,6 +315,7 @@ img{
     min-height: 70vh;
     justify-content: center;
     align-self: stretch;
+    flex: 1;
 }
 
 .container__photo{
@@ -335,7 +340,7 @@ img{
 
 .slides {
     position: relative;
-    height: 300px;
+    /*height: 300px;*/
     padding: 0px;
     margin: 0px;
     list-style-type: none;
@@ -353,6 +358,8 @@ img{
     -o-transition: opacity 1s;
     transition: opacity 1s;
     width: auto;
+    display: flex;
+    flex-direction: column;
 }
 
 .slide img{
@@ -361,8 +368,19 @@ img{
     position: relative;
     /*left: -50%;*/
     max-width: 1000px;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
 }
+
+.container:hover .next,
+.container:hover .previous{
+    opacity: .6;
+}
+
+
+.slide__description{
+    text-align: left;
+    margin-top: 0px;
+ }
 
 .showing {
     opacity: 1;
@@ -401,8 +419,14 @@ img{
 .thumbnails{
     display: flex;
     flex-wrap: wrap;
-    max-width: 100%;
+    max-width: 96%;
     margin: 0 auto;
+    justify-content: space-between;
+    max-width: 1100px;
+}
+
+.thumbnail:last-of-type{
+    justify-self: flex-start;
 }
 
 /*---------------------------------------*/
@@ -433,6 +457,11 @@ img{
     z-index: 999;
 }
 
+.controls{
+    margin-top: 20%;
+    opacity: .2;
+}
+
 .closeInfo{
     background-position: 0 30px;
 
@@ -454,7 +483,7 @@ img{
     -moz-transition: opacity .3s;
     -o-transition: opacity .3s;
     transition: opacity .3s;
-    opacity: .6;
+    opacity: .1;
     z-index: 99;
     position: absolute;
 }
@@ -484,7 +513,7 @@ img{
 
 .info-box{
 	right: 5%;
-	background: rgba(238,238,238, .85);
+	background: rgba(250,250,250, .85);
 	position:absolute;
 	padding: 0 40px 40px 30px;
 	border:none;
@@ -741,6 +770,10 @@ img{
         left: -20px;
     }
 
+    .controls{
+        margin-top: 43%;
+    }
+
 }
 
 @media screen and (max-width: 900px) {
@@ -753,6 +786,7 @@ img{
     .mainNav ul {
         margin-left: 11%;
     }
+
 
 }
 
@@ -788,7 +822,7 @@ img{
 
     .info-box{
         right: 5%;
-        /*background: rgba(238,238,238, .85);*/
+        background: rgba(238,238,238, .85);
         /*position:relative;*/
         padding: 0;
         border:none;
@@ -796,7 +830,7 @@ img{
         z-index: 10000;
         width:90%;
         text-align: center;
-        top: 73px;
+        top: 120px;
     }
 
 }

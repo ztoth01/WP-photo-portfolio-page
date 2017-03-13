@@ -27,7 +27,7 @@ get_header(); ?>
 
 			<li class="slide <?php if($i == 1){echo "showing";}?>" >
 				<img class="" src="<?php the_sub_field('image'); ?>" alt="<?php echo $i;?>" />
-<!--				<span>--><?php //the_sub_field('description'); ?><!--</span>-->
+				<span class="slide__description"><?php the_sub_field('description'); ?></span>
 
 			 </li>
 
