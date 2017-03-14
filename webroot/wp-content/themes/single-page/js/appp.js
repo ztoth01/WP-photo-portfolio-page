@@ -91,13 +91,9 @@ window.addEventListener('load', function(){
 
             if (e.keyCode == '38' || e.keyCode == '39' ) {
                App.nextSlide();
-                console.log("next")
-                console.log(currentSlide)
             }
             else if (e.keyCode == '40' || e.keyCode == '37' ) {
                 App.previousSlide();
-                console.log("previous")
-                console.log(currentSlide)
             }
         },
         hideShowToggle:(elHide, elShow)=>{
@@ -122,7 +118,6 @@ window.addEventListener('load', function(){
             thumbnails[i].onclick = function(){
                 for(var i = 0; i < slides.length; i++){
                     slides[i].className = 'slide';
-                    console.log('yep');
                 }
                 App.hideShowToggle(swipegallery, containerThumbnails);
                 slides[index].className = 'slide showing';
@@ -131,10 +126,6 @@ window.addEventListener('load', function(){
     }
     thumbnailsIcon.onclick = () =>{
         App.hideShowToggle(swipegallery, containerThumbnails);
-    };
-
-    closeThumbNails.onclick = ()=>{
-        console.log("yep1");
     };
 
     for(let i=0; i<controls.length; i++){

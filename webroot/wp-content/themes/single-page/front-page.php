@@ -3,7 +3,7 @@
  get_header(); ?>
 
 
-<div id="" class="">
+<div id="" class="container">
 
         <?php if( have_rows('front_page') ):
             $i = 1;
@@ -23,6 +23,5 @@
                 </div>
             </div>
         <?php endif; ?>
-
 </div>
 <?php get_footer(); ?>
