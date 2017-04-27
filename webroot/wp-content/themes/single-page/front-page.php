@@ -3,7 +3,7 @@
  get_header(); ?>
 
 
-<div id="" class="container">
+<div id="" class="container" style="max-width: 90%;">
 
         <?php if( have_rows('front_page') ):
             $i = 1;
@@ -24,4 +24,10 @@
             </div>
         <?php endif; ?>
 </div>
+
+<span class="tigger thumbnailsIcon" id="thumbnailsIcon" style="display:none !important;"></span>
+<span class="tigger closeThumbNails" id="closeThumbNails" style="display:none !important;"></span>
+<span class="controls previous" id="previous" style="display:none !important;"></span>
+<span class="controls next" id="next" style="display:none !important;"></span>
+
 <?php get_footer(); ?>

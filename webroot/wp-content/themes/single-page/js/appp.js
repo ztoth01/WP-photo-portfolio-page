@@ -24,7 +24,7 @@ window.addEventListener('load', function(){
         startY,
         distX,
         distY,
-        threshold = 150, //required min distance traveled to be considered swipe
+        threshold = 20, //required min distance traveled to be considered swipe
         restraint = 100, // maximum distance allowed at the same time in perpendicular direction
         allowedTime = 500, // maximum time allowed to travel that distance
         elapsedTime,
@@ -119,8 +119,11 @@ window.addEventListener('load', function(){
                 for(var i = 0; i < slides.length; i++){
                     slides[i].className = 'slide';
                 }
+                //console.log(index);
                 App.hideShowToggle(swipegallery, containerThumbnails);
                 slides[index].className = 'slide showing';
+                currentSlide = index;
+
             }
         })(i);
     }
@@ -128,8 +131,8 @@ window.addEventListener('load', function(){
         App.hideShowToggle(swipegallery, containerThumbnails);
     };
 
-    for(let i=0; i<controls.length; i++){
-        controls[i].style.display = 'inline-block';
+    for(let z=0; z<controls.length; z++){
+        controls[z].style.display = 'inline-block';
     }
 
     next.onclick = ()=>{
@@ -149,7 +152,7 @@ window.addEventListener('load', function(){
     App.onTouch(el, function(evt, dir, phase, swipetype, distance){
         if (phase == 'end'){ // on touchend
             if (swipetype == 'left' || swipetype == 'right'){ // if a successful left or right swipe is made
-                (swipetype =='left' ? (console.log("next"), App.nextSlide()) : (console.log("previous"), App.previousSlide()))
+                (swipetype =='left' ? App.nextSlide() :  App.previousSlide())
             }
         }
     }) // end ontouch

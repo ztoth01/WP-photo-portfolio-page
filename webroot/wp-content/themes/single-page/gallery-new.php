@@ -16,6 +16,19 @@
 
 get_header(); ?>
 
+	<script>
+
+		var elem = jQuery('.container__photo');
+
+		console.log(elem);
+
+		//querySelectorAll('.showing')
+		var valakal = document.querySelectorAll('.showing');
+
+		console.log(valakal);
+
+	</script>
+
 	<main class="container">
 		<div class="container__photo is--visible" id="swipegallery">
 
@@ -39,6 +52,8 @@ get_header(); ?>
 			</ul>
 			<span class="controls previous" id="previous"></span>
 			<span class="controls next" id="next"></span>
+			<span class="tigger thumbnailsIcon" id="thumbnailsIcon"></span>
+			<span class="tigger closeThumbNails" id="closeThumbNails"></span>
 		</div>
 				<?php endif;?>
 
@@ -62,13 +77,10 @@ get_header(); ?>
 				endwhile;
 			?>
 
-
 			</ul>
 		</div>
 	<?php endif;?>
 
-		<span class="tigger thumbnailsIcon" id="thumbnailsIcon"></span>
-		<span class="tigger closeThumbNails" id="closeThumbNails"></span>
 	</main><!-- #main -->
 
 <?php
